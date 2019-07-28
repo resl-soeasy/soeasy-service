@@ -9,12 +9,15 @@ class Configure(dbhandler.DBHandler):
         logging.info("Get Configuration")
 
     def get_gpio_list(self):
+
+        dict_test = {}
         self.cursor.execute("SELECT * FROM GPIO_LIST", "")
         result = self.cursor.fetchall()
 
         for record in result:
             logging.info(record)
+            dict_test[record[0]] = record[1]
 
         logging.info("Get GPIO List")
 
-        return result
+        return dict_test
