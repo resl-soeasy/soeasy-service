@@ -1,5 +1,6 @@
 import mysql.connector
 import logging
+import sys
 
 class DBHandler:
     def __init__(self):
@@ -13,5 +14,6 @@ class DBHandler:
             )
         except Exception as e:
             logging.error("db connect failed (message : {})".format(e))
+            sys.exit(1)
 
         self.cursor = self.mydb.cursor()
