@@ -56,7 +56,7 @@ class Init:
         self.configure = configure.Configure()
         JSON = self.configure.get_gpio_list()
 
-@logger.AddLogger(log_location="/var/log/soeasy.log", log_mode=logging.INFO)
+@logger.AddLogger(log_location="./logs/soeasy-service.log", log_mode=logging.INFO)
 def main():
     Init().configure()
 

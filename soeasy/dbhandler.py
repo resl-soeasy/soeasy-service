@@ -9,7 +9,6 @@ class DBHandler:
                 host    =   "localhost",
                 user    =   "soeasy",
                 password  =   "soeasy",
-                passwd = "soeasy",
                 database=   "soeasy"
             )
         except Exception as e:
